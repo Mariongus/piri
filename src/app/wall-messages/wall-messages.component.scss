@@ -1,0 +1,19 @@
+@import 'functions';
+
+.walls{
+    display: flex;
+    flex-direction: column;
+    
+
+    .wall{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+        @include padram(8rem 0,0);
+        background: linear-gradient(120deg,purple,rgb(85, 0, 85));
+
+    }
+
+}

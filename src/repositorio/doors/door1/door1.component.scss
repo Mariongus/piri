@@ -1,0 +1,53 @@
+@import 'functions';
+
+.door1{
+    @include container_size(30rem,30rem);
+    @include colors(white,black);
+    display: flex;
+    flex-direction: column;
+
+    .graf{
+        @include container_size(60%,100%);
+
+        a{
+            img{
+                @include container_size(100%,100%);
+                object-fit: cover;
+            }
+        }
+    }
+
+    .deta{
+        display: flex;
+        flex: 1;
+        .limg{
+            @include padram(1.2rem 1.2rem 0 0,0);
+            display: flex;
+            align-self: flex-start;
+            img{
+                @include container_size(4rem,4rem);
+                object-fit: cover;
+                border-radius: 50%;
+            }
+        }
+        .texto{
+            @include container_size(100%,100%);
+            background-color: gray;
+        
+        
+            h3{
+                @include padram(0, 1.2rem 0 0.6rem 0);
+                a{
+                    p{
+                        font-size: 1.4rem;
+                        line-height: 1.8rem;
+                        color: white;
+                    }
+                }
+            }
+           
+
+        
+        }
+    }
+}

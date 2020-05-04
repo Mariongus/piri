@@ -1,0 +1,3 @@
+
+MONGO VENDOR
+composer require mongodb/mongodb --ignore-platform-reqs

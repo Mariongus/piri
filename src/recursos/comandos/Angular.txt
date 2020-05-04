@@ -1,0 +1,3 @@
+
+DESCARGAR FOLDER ANGULAR SCSS
+ng new nombreCarpeta --style=scss

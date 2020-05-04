@@ -1,0 +1,19 @@
+@import 'functions';
+
+.cuadro2{
+    @include adaptable(15rem,1,100%);
+    h2{
+        font-size: 3.6rem;
+        @include container_size(auto,100%);
+    }
+    p{
+        font-size: 1.8rem;
+        opacity: 0.8;
+        min-width: 100%;
+    }
+}
+.marco{
+    display: flex;
+    @include padram(0,3.6rem 3.6rem);
+    @include adaptable(30rem,1,100%);
+}

@@ -1,0 +1,94 @@
+
+@mixin get_backgroundimage($urlandimgPath,$size:cover,$shadowDown:0,$shadowUp:0.5,$color:black) {
+    background-image: linear-gradient(rgba($color,$shadowUp),rgba($color,$shadowDown) ),$urlandimgPath;
+    
+    background-repeat: no-repeat;
+    background-size: $size;
+    background-position: center center;
+}
+
+@mixin container_size($height:auto,$width:auto) {
+    height: $height;
+    width: $width;
+}
+
+@mixin positionCenter($justify:center,$direction:row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin put_on($top:50%,$left:50%){
+    position: absolute;
+    top: $top;
+    left: $left;
+    transform: translate(-50%,-50%);
+}
+
+@mixin colors($bgcolor:currentColor,$fntcolor:currentcolor) {
+    background-color: $bgcolor;
+    color: $fntcolor;
+}
+
+@mixin padram($padding:0,$margin:0) {
+    margin: $margin;
+    padding: $padding;
+}
+
+
+
+
+
+@mixin container_flex(){
+    height: auto;
+    padding: 0 10vh 0 10vh;
+}
+
+@mixin width_flex($min,$width) {
+    min-width: $min;
+    width: $width;
+}
+
+@mixin height_flex($min,$height) {
+    min-height: $min;
+    height: $height;
+}
+
+@mixin adaptable($min-width:auto,$f-grow:1,$max-width:auto) {
+    min-width: $min-width;
+    flex-grow: $f-grow;
+    max-width: $max-width;
+}
+
+/* FONTS FUNCTIONS */
+
+@mixin family_Poppins {
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;600;800&display=swap');
+}
+@mixin use_Poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@mixin family_Roboto {
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+}
+@mixin use_Roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* LIMIT TEXT LINES ... */
+
+@mixin text_ellipse($max_lines:2){
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $max_lines;
+    overflow: hidden;
+}
+
+@mixin limit_lines($line-height:2rem , $max_lines:2) {
+    display: block;
+    max-height: calc( $line-height*$max_lines );
+    text-overflow: ellipsis;
+}

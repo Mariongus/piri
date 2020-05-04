@@ -1,0 +1,31 @@
+@import 'functions';
+
+.navbar1{
+display: flex;
+align-items: center;
+@include padram(0,0 1.2rem);
+    a{
+        @include padram(0, 0 1.2rem 0 0);
+        img{
+            @include container_size(3.5rem,auto);
+        }
+    }
+    nav{
+        ul{
+            display: flex;
+
+            
+            li{
+                @include padram(0,0 1.2rem 0 0);
+                a{
+                    display: flex;
+                    @include padram(1.2rem 0);
+                    color: white;
+                    font-size: 1.4rem;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                }
+            } 
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<!-- <p>navbar1 works!</p> -->
+<div class="navbar1">
+    <a href="">
+        <img [src]="navbar1_img" alt="">
+    </a>
+    
+    <nav>
+        <ul>
+            <li><a href="">home</a></li>
+            <li><a [routerLink]="[ '/messages' ]" routerLinkActive="active">messages</a></li>
+            <li><a [routerLink]="[ '/notifications' ]" routerLinkActive="active">notifications</a></li>
+            <li><a href="">profile</a></li>   
+        </ul>
+    </nav>
+</div>
